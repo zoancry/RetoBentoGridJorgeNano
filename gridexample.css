@@ -1,0 +1,128 @@
+/* Archivo: styles.css */
+.container {
+    display: grid;
+    height: 768px; /* Asegura que el contenedor ocupe toda la altura de la pantalla */
+    width: 1024px;
+    grid-template-columns: repeat(4, 1fr); /* Cuatro columnas */
+    grid-template-rows: auto auto; /* Dos filas automáticas */
+    gap: 30px; /* Espacio entre tarjetas */
+    padding: 20px;
+
+    /* Definimos las áreas específicas para cada tarjeta */
+    grid-template-columns: 250px 250px 250px 250px;
+    grid-template-rows: 250px 120px 120px 250px;
+    grid-template-areas:
+    "card1 card2 card2 card7"
+    "card1 card4 card5 card7"
+    "card3 card4 card5 card7"
+    "card3 card6 card8 card8"; /* Una tarjeta más grande en la última fila */
+}
+
+.card {
+    background-color: #f5f5f5; /* Fondo gris claro */
+    padding: 20px; /* Espacio interno de las tarjetas */
+    text-align: center; /* Centra el texto dentro de cada tarjeta */
+    border-radius: 8px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    font-size: 16px; /* Tamaño del texto */
+    font-family: Arial, sans-serif; /* Fuente básica */
+}
+.card1 {
+    grid-area: card1; /* Ocupa la posición "card1" */
+    
+    border-radius: 10px;
+    background-color: hsl(31, 66%, 93%);
+}
+.toplefttext{
+    letter-spacing: -2px;
+    font-size: 30px;
+    padding-left: 30px;
+    font-weight: 700px;
+    line-height: 25px;
+    padding-top: 30px;
+}
+.quicker{
+    color:hsl(256, 67%, 59%);
+    font-style: italic;
+}
+.card2 {
+    grid-area: card2; /* Ocupa la posición "card2" */
+    border-radius: 10px;
+    background-color: hsl(254, 88%, 90%);
+}
+
+.toprighttext{
+    letter-spacing: -2px;
+    font-size: 23px;
+    padding-left: 20px;
+    line-height: 25px;
+}
+
+.toprightimg{
+    width: 285px;       
+    height: 165px;       
+    padding: 10px;  
+    margin-top: -20px;
+    padding-left: 20px;
+    margin-bottom: -10px;
+}
+
+.toprighttext2{
+    font-size: 13px;
+    padding-left: 20px;
+    line-height: 12px;
+    font-weight: 500px;
+}
+
+.card3 {
+    grid-area: card3; /* Ocupa la posición "card3" */
+    
+    border-radius: 10px;
+    background-color: hsl(39, 100%, 71%);
+}
+.topmidtext{
+    letter-spacing: -2px;
+    font-size: 30px;
+    padding-left: 20px;
+    line-height: 25px;
+    margin-top: 20px;
+}
+.topmidimg{
+    width: 85%;       
+    height: auto;       
+    padding: 10px;      
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.card4 {
+    grid-area: card4; /* Ocupa la posición "card4" */
+}
+
+.card5 {
+    grid-area: card5; /* Ocupa la posición "card5" */
+}
+
+.card6 {
+    grid-area: card6; /* Ocupa la posición "card6" */
+}
+
+.card7 {
+    grid-area: card7; /* Ocupa la posición "card7" */
+}
+
+.card8 {
+    grid-area: card8; /* Ocupa la posición "card8" */
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); /* Cambia a 2 columnas */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        grid-template-columns: 1fr; /* Cambia a 1 columna */
+    }
+}
