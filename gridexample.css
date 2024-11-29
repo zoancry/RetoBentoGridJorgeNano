@@ -9,12 +9,12 @@
     padding: 20px;
 
     /* Definimos las áreas específicas para cada tarjeta */
+    grid-template-columns: 250px 250px 250px 250px;
+    grid-template-rows: 250px 120px 120px 250px;
     grid-template-areas:
-    "card1 card2 card2 card7"
     "card1 card2 card2 card7"
     "card1 card4 card5 card7"
     "card3 card4 card5 card7"
-    "card3 card6 card8 card8"
     "card3 card6 card8 card8"; /* Una tarjeta más grande en la última fila */
 }
 
